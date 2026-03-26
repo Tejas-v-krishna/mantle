@@ -1,0 +1,201 @@
+@import "tailwindcss";
+
+/* ─── DARK MODE (DEFAULT) ─────────────────────────── */
+:root, :root[data-theme="dark"] {
+  --bg-page: #0A0908;
+  --bg-surface: #111009;
+  --bg-elevated: #1A1713;
+  --bg-sunken: #0D0B09;
+  --bg-overlay: rgba(0,0,0,0.85);
+
+  --border-subtle: rgba(255,255,255,0.03);
+  --border-default: rgba(255,255,255,0.07);
+  --border-strong: rgba(255,255,255,0.12);
+  --border-ember: rgba(212,136,74,0.30);
+
+  --text-primary: #F2EDE6;
+  --text-secondary: #9C8E82;
+  --text-tertiary: #5E5248;
+  --text-inverse: #0A0908;
+  --text-on-ember: #FFFFFF;
+
+  --ember-default: #D4884A;
+  --ember-hover: #E09A5E;
+  --ember-subtle: rgba(212,136,74,0.08);
+  --ember-muted: rgba(212,136,74,0.15);
+  --ember-strong: #C97B3A;
+  --ember-text: #E8A06A;
+
+  --success-bg: rgba(58,155,74,0.08);
+  --success-border: rgba(58,155,74,0.15);
+  --success-text: #6BCF7F;
+  --warning-bg: rgba(217,119,6,0.08);
+  --warning-border: rgba(217,119,6,0.15);
+  --warning-text: #FCD34D;
+  --error-bg: rgba(220,38,38,0.08);
+  --error-border: rgba(220,38,38,0.15);
+  --error-text: #FCA5A5;
+  --info-bg: rgba(59,130,246,0.08);
+  --info-border: rgba(59,130,246,0.15);
+  --info-text: #93C5FD;
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.30);
+  --shadow-md: 0 8px 32px rgba(0,0,0,0.45);
+  --shadow-lg: 0 16px 64px rgba(0,0,0,0.60);
+  --shadow-xl: 0 32px 128px rgba(0,0,0,0.75);
+  --shadow-ember: 0 16px 64px rgba(212,136,74,0.15);
+
+  --nav-bg: rgba(10,9,8,0.92);
+  --nav-text: rgba(242,237,230,0.50);
+  --nav-active: #D4884A;
+
+  --ff-display: 'Bricolage Grotesque', Georgia, serif;
+  --ff-body: 'Geist', system-ui, sans-serif;
+
+  --r-xs: 4px; --r-sm: 8px; --r-md: 12px; --r-lg: 16px;
+  --r-xl: 20px; --r-2xl: 32px; --r-3xl: 48px; --r-pill: 9999px;
+
+  --ease-out: cubic-bezier(0.19,1,0.22,1);
+  --ease-spring: cubic-bezier(0.34,1.56,0.64,1);
+  --ease-in: cubic-bezier(0.95,0.05,0.795,0.035);
+  --dur-fast: 150ms;
+  --dur-base: 300ms;
+  --dur-slow: 500ms;
+  --dur-xslow: 800ms;
+  --z-nav: 400;
+}
+
+/* ─── LIGHT MODE OVERRIDE ─────────────────────────── */
+:root[data-theme="light"] {
+  --bg-page: #FAF8F5;
+  --bg-surface: #FFFFFF;
+  --bg-elevated: #F5F0EB;
+  --bg-sunken: #F0E6D6;
+  --bg-overlay: rgba(13,12,11,0.50);
+
+  --border-subtle: #F0E6D6;
+  --border-default: #E8D5BC;
+  --border-strong: #C8B89A;
+  --border-ember: rgba(201,123,58,0.30);
+
+  --text-primary: #0D0C0B;
+  --text-secondary: #6B5B4E;
+  --text-tertiary: #A89D94;
+  --text-inverse: #F2EDE6;
+
+  --ember-default: #C97B3A;
+  --ember-hover: #D98D4E;
+  --ember-subtle: #FFF4EE;
+  --ember-muted: #FDE8D0;
+  --ember-strong: #9A5820;
+  --ember-text: #9A5820;
+
+  --success-bg: #EDFAEF; --success-border: #D6F0DA; --success-text: #2D7A3A;
+  --warning-bg: #FFFBEB; --warning-border: #FEF3C7; --warning-text: #B45309;
+  --error-bg: #FFF5F5; --error-border: #FEE2E2; --error-text: #B91C1C;
+  --info-bg: #EFF6FF; --info-border: #DBEAFE; --info-text: #1D4ED8;
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 12px 32px rgba(0,0,0,0.05);
+  --shadow-lg: 0 24px 64px rgba(0,0,0,0.06);
+  --shadow-xl: 0 32px 128px rgba(0,0,0,0.08);
+  --shadow-ember: 0 16px 48px rgba(201,123,58,0.15);
+}
+
+/* ─── TAILWIND 4 THEME EXTENSIONS ─────────────────── */
+@theme {
+  --color-page: var(--bg-page);
+  --color-surface: var(--bg-surface);
+  --color-elevated: var(--bg-elevated);
+  --color-sunken: var(--bg-sunken);
+
+  --color-ember-default: var(--ember-default);
+  --color-ember-hover: var(--ember-hover);
+  --color-ember-text: var(--ember-text);
+  --color-ember-subtle: var(--ember-subtle);
+  --color-ember-muted: var(--ember-muted);
+  --color-ember-strong: var(--ember-strong);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+
+  --color-border-subtle: var(--border-subtle);
+  --color-border-default: var(--border-default);
+  --color-border-strong: var(--border-strong);
+
+  --font-display: var(--ff-display);
+  --font-body: var(--ff-body);
+
+  --radius-xs: var(--r-xs);
+  --radius-sm: var(--r-sm);
+  --radius-md: var(--r-md);
+  --radius-lg: var(--r-lg);
+  --radius-xl: var(--r-xl);
+  --radius-2xl: var(--r-2xl);
+  --radius-3xl: var(--r-3xl);
+
+  --animate-skeleton-shimmer: skeleton-shimmer 2s linear infinite;
+
+  @keyframes skeleton-shimmer {
+    from { background-position: 200% 0; }
+    to { background-position: -200% 0; }
+  }
+
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  --animate-scroll: scroll 40s linear infinite;
+}
+
+/* ─── BASE STYLES ─────────────────────────────────── */
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { 
+    scroll-behavior: smooth; 
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    font-family: var(--ff-body);
+    background: var(--bg-page);
+    color: var(--text-primary);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+}
+
+/* ─── UTILITIES ───────────────────────────────────── */
+@layer utilities {
+  .container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  @media (max-width: 768px) {
+    .container { padding: 0 24px; }
+  }
+
+  .canvas-glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .text-gradient-ember {
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--ember-default) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* ─── LENIS ───────────────────────────────────────── */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+.lenis.lenis-scrolling iframe { pointer-events: none; }
